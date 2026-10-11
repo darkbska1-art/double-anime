@@ -5,7 +5,7 @@ const {
   InteractionContextType,
   EmbedBuilder,
 } = require("discord.js");
-const { validateAutorole } = require("../utils/autoroleCheck");
+const { validateAutorole } = require("../lib/autoroleCheck");
 
 module.exports = {
   data: new SlashCommandBuilder()
