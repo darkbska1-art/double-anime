@@ -1,0 +1,21 @@
+{
+  "name": "double-anime-pro",
+  "version": "1.0.0",
+  "description": "DOUBLE.ANIME Türkçe Discord botu",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.19.2",
+    "@napi-rs/canvas": "^1.0.11",
+    "discord.js": "^14.21.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "rss-parser": "^3.13.0"
+  }
+}
