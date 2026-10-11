@@ -1,3 +1,14 @@
+const http = require("http");
+
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+    res.writeHead(200);
+    res.end("Discord bot is running!");
+}).listen(PORT, () => {
+    console.log(`🌐 Web server ${PORT} portunda çalışıyor.`);
+});
+
 
 require("dotenv").config();
 
@@ -37,30 +48,7 @@ if (!config.token) {
   process.exit(1);
 }
 
-// ==================================================
-// WEB SUNUCUSU
-// ==================================================
 
-const app = express();
-
-app.get("/", (_req, res) => {
-  res.status(200).send("𓍢ִ໋🌷͙֒・ DOUBLE.ANIME bot servisi aktif.");
-});
-
-app.get("/health", (_req, res) => {
-  res.status(200).json({
-    ok: true,
-    service: "double-anime"
-  });
-});
-
-const server = http.createServer(app);
-
-server.listen(
-  Number(process.env.PORT) || 3000,
-  "0.0.0.0",
-  () => console.log("🌐 Web sunucusu hazır.")
-);
 
 // ==================================================
 // DISCORD CLIENT
